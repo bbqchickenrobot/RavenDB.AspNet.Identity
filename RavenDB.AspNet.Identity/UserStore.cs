@@ -11,6 +11,10 @@ using Raven.Client;
 
 namespace RavenDB.AspNet.Identity
 {
+
+    // todo - UserStore<TUser> class for raven looks to be messed up..... take a peek at the following: 
+    // https://github.com/tugberkugurlu/AspNet.Identity.RavenDB/blob/master/src/AspNet.Identity.RavenDB/Stores/RavenUserStore.cs
+
     public class UserStore<TUser> : IUserStore<TUser>, IUserLoginStore<TUser>, IUserClaimStore<TUser>, IUserRoleStore<TUser>,
         IUserPasswordStore<TUser>, IUserSecurityStampStore<TUser>, IUserEmailStore<TUser>, IUserLockoutStore<TUser, string>,
         IUserTwoFactorStore<TUser, string>, IUserPhoneNumberStore<TUser>
